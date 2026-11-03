@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark" data-palette="indigo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Регламент Парламента</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.jpg">
+
+  <style>
+    /* ==========================================================================
+       1. MATERIAL YOU (MATERIAL DESIGN 3) DYNAMIC COLOR TOKENS
+       5 Palettes (indigo, emerald, crimson, amber, cyan) x 3 Themes (light, dark, oled)
+       ========================================================================== */
+    :root {
+      --md-easing: cubic-bezier(0.2, 0, 0, 1);
+      --md-easing-emphasized: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --doc-font-size: 16px;
+      --doc-line-height: 1.72;
+      --sidebar-width: 296px;
+      --sidebar-rail-width: 84px;
+    }
+
+    /* ---------------- PALETTE 1: INDIGO (Государственный Индиго) ---------------- */
+    html[data-palette="indigo"][data-theme="light"] {
+      --md-bg: #f8f9ff;
+      --md-on-bg: #181b25;
+      --md-surface: #f1f3fc;
+      --md-surface-low: #ebedf7;
+      --md-surface-container: #e5e8f3;
+      --md-surface-high: #dfe2ee;
+      --md-surface-highest: #d8dce9;
+      --md-card: #ffffff;
+      --md-on-surface: #181b25;
+      --md-on-surface-variant: #444756;
+      --md-primary: #374cd7;
+      --md-on-primary: #ffffff;
+      --md-primary-container: #dde1ff;
+      --md-on-primary-container: #001258;
+      --md-secondary: #565d74;
+      --md-secondary-container: #dae1fc;
+      --md-on-secondary-container: #131a2e;
+      --md-tertiary: #725372;
+      --md-tertiary-container: #fed6fb;
+      --md-on-tertiary-container: #2a112c;
+      --md-outline: #747788;
+      --md-outline-variant: #c4c6d6;
+      --md-shadow: 0 8px 28px rgba(24, 27, 37, 0.06);
+    }
+    html[data-palette="indigo"][data-theme="dark"] {
+      --md-bg: #10121a;
+      --md-on-bg: #e2e4f0;
+      --md-surface: #151822;
+      --md-surface-low: #191c27;
+      --md-surface-container: #1e212e;
+      --md-surface-high: #262a39;
+      --md-surface-highest: #313546;
+      --md-card: #1a1d28;
+      --md-on-surface: #e2e4f0;
+      --md-on-surface-variant: #c4c6d6;
+      --md-primary: #b8c4ff;
+      --md-on-primary: #06208b;
+      --md-primary-container: #2238b3;
+      --md-on-primary-container: #dde1ff;
+      --md-secondary: #bec5df;
+      --md-secondary-container: #3e455b;
+      --md-on-secondary-container: #dae1fc;
+      --md-tertiary: #e0b9df;
+      --md-tertiary-container: #583c59;
+      --md-on-tertiary-container: #fed6fb;
+      --md-outline: #8e90a0;
+      --md-outline-variant: #434656;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    }
+    html[data-palette="indigo"][data-theme="oled"] {
+      --md-bg: #000000;
+      --md-on-bg: #f3f4fc;
+      --md-surface: #05060a;
+      --md-surface-low: #090b12;
+      --md-surface-container: #0f121c;
+      --md-surface-high: #171b29;
+      --md-surface-highest: #212638;
+      --md-card: #080a10;
+      --md-on-surface: #f3f4fc;
+      --md-on-surface-variant: #b8bbd0;
+      --md-primary: #c4ceff;
+      --md-on-primary: #00146b;
+      --md-primary-container: #1f33a8;
+      --md-on-primary-container: #e3e7ff;
+      --md-secondary: #bec5df;
+      --md-secondary-container: #282d3f;
+      --md-on-secondary-container: #dae1fc;
+      --md-tertiary: #e0b9df;
+      --md-tertiary-container: #452c46;
+      --md-on-tertiary-container: #fed6fb;
+      --md-outline: #6c6f82;
+      --md-outline-variant: #25293a;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    /* ---------------- PALETTE 2: EMERALD (Изумрудный Суверенитет) ---------------- */
+    html[data-palette="emerald"][data-theme="light"] {
+      --md-bg: #f4fbf6;
+      --md-on-bg: #161d18;
+      --md-surface: #edf5f0;
+      --md-surface-low: #e7efe9;
+      --md-surface-container: #e1eae4;
+      --md-surface-high: #dbe4de;
+      --md-surface-highest: #d5ded8;
+      --md-card: #ffffff;
+      --md-on-surface: #161d18;
+      --md-on-surface-variant: #404943;
+      --md-primary: #096b49;
+      --md-on-primary: #ffffff;
+      --md-primary-container: #9ef4c7;
+      --md-on-primary-container: #002113;
+      --md-secondary: #4d6356;
+      --md-secondary-container: #cfe9d8;
+      --md-on-secondary-container: #092015;
+      --md-tertiary: #3b6472;
+      --md-tertiary-container: #bfe9f9;
+      --md-on-tertiary-container: #001f28;
+      --md-outline: #707972;
+      --md-outline-variant: #bfc9c1;
+      --md-shadow: 0 8px 28px rgba(10, 35, 22, 0.06);
+    }
+    html[data-palette="emerald"][data-theme="dark"] {
+      --md-bg: #0e1511;
+      --md-on-bg: #dee4df;
+      --md-surface: #121a15;
+      --md-surface-low: #161e19;
+      --md-surface-container: #1b231e;
+      --md-surface-high: #252e28;
+      --md-surface-highest: #303933;
+      --md-card: #161f1a;
+      --md-on-surface: #dee4df;
+      --md-on-surface-variant: #bfc9c1;
+      --md-primary: #82d7ac;
+      --md-on-primary: #003824;
+      --md-primary-container: #005236;
+      --md-on-primary-container: #9ef4c7;
+      --md-secondary: #b4ccbc;
+      --md-secondary-container: #364b3f;
+      --md-on-secondary-container: #cfe9d8;
+      --md-tertiary: #a4cddc;
+      --md-tertiary-container: #234c59;
+      --md-on-tertiary-container: #bfe9f9;
+      --md-outline: #89938c;
+      --md-outline-variant: #404943;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    }
+    html[data-palette="emerald"][data-theme="oled"] {
+      --md-bg: #000000;
+      --md-on-bg: #ebf4ee;
+      --md-surface: #040806;
+      --md-surface-low: #070e0a;
+      --md-surface-container: #0b1510;
+      --md-surface-high: #122119;
+      --md-surface-highest: #1a2f24;
+      --md-card: #060b08;
+      --md-on-surface: #ebf4ee;
+      --md-on-surface-variant: #b4c4b9;
+      --md-primary: #6ee7b7;
+      --md-on-primary: #002c1b;
+      --md-primary-container: #044a32;
+      --md-on-primary-container: #a7f3d0;
+      --md-secondary: #b4ccbc;
+      --md-secondary-container: #22352b;
+      --md-on-secondary-container: #cfe9d8;
+      --md-tertiary: #a4cddc;
+      --md-tertiary-container: #1b3d48;
+      --md-on-tertiary-container: #bfe9f9;
+      --md-outline: #5d6e63;
+      --md-outline-variant: #1d2e24;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    /* ---------------- PALETTE 3: CRIMSON (Имперский Пурпур) ---------------- */
+    html[data-palette="crimson"][data-theme="light"] {
+      --md-bg: #fff8f8;
+      --md-on-bg: #22191b;
+      --md-surface: #f9f1f3;
+      --md-surface-low: #f3ebed;
+      --md-surface-container: #ede5e7;
+      --md-surface-high: #e8dfe1;
+      --md-surface-highest: #e2d9dc;
+      --md-card: #ffffff;
+      --md-on-surface: #22191b;
+      --md-on-surface-variant: #514346;
+      --md-primary: #983256;
+      --md-on-primary: #ffffff;
+      --md-primary-container: #ffd9e2;
+      --md-on-primary-container: #3e001c;
+      --md-secondary: #74565e;
+      --md-secondary-container: #ffd9e2;
+      --md-on-secondary-container: #2b151b;
+      --md-tertiary: #7c5635;
+      --md-tertiary-container: #ffdcc2;
+      --md-on-tertiary-container: #2e1500;
+      --md-outline: #837376;
+      --md-outline-variant: #d5c2c5;
+      --md-shadow: 0 8px 28px rgba(45, 16, 26, 0.06);
+    }
+    html[data-palette="crimson"][data-theme="dark"] {
+      --md-bg: #181113;
+      --md-on-bg: #efdfe1;
+      --md-surface: #1d1517;
+      --md-surface-low: #22191b;
+      --md-surface-container: #271d20;
+      --md-surface-high: #32272a;
+      --md-surface-highest: #3d3235;
+      --md-card: #21181b;
+      --md-on-surface: #efdfe1;
+      --md-on-surface-variant: #d5c2c5;
+      --md-primary: #ffb0c8;
+      --md-on-primary: #5e0f32;
+      --md-primary-container: #7b2447;
+      --md-on-primary-container: #ffd9e2;
+      --md-secondary: #e3bdc6;
+      --md-secondary-container: #5a3f47;
+      --md-on-secondary-container: #ffd9e2;
+      --md-tertiary: #efbd94;
+      --md-tertiary-container: #613f20;
+      --md-on-tertiary-container: #ffdcc2;
+      --md-outline: #9e8c90;
+      --md-outline-variant: #514346;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    }
+    html[data-palette="crimson"][data-theme="oled"] {
+      --md-bg: #000000;
+      --md-on-bg: #f9ecef;
+      --md-surface: #090506;
+      --md-surface-low: #0e0709;
+      --md-surface-container: #150b0e;
+      --md-surface-high: #221217;
+      --md-surface-highest: #301a20;
+      --md-card: #0b0608;
+      --md-on-surface: #f9ecef;
+      --md-on-surface-variant: #d5bcc1;
+      --md-primary: #ffafd0;
+      --md-on-primary: #540028;
+      --md-primary-container: #73183d;
+      --md-on-primary-container: #ffd9e4;
+      --md-secondary: #e3bdc6;
+      --md-secondary-container: #412930;
+      --md-on-secondary-container: #ffd9e2;
+      --md-tertiary: #efbd94;
+      --md-tertiary-container: #4a2e14;
+      --md-on-tertiary-container: #ffdcc2;
+      --md-outline: #796267;
+      --md-outline-variant: #322025;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    /* ---------------- PALETTE 4: AMBER (Золотой Триумвират) ---------------- */
+    html[data-palette="amber"][data-theme="light"] {
+      --md-bg: #fff9f4;
+      --md-on-bg: #201b13;
+      --md-surface: #f9f3eb;
+      --md-surface-low: #f3ede5;
+      --md-surface-container: #ede7df;
+      --md-surface-high: #e8e1d9;
+      --md-surface-highest: #e2dcd4;
+      --md-card: #ffffff;
+      --md-on-surface: #201b13;
+      --md-on-surface-variant: #4f4539;
+      --md-primary: #825500;
+      --md-on-primary: #ffffff;
+      --md-primary-container: #ffddb3;
+      --md-on-primary-container: #291800;
+      --md-secondary: #6f5b40;
+      --md-secondary-container: #fbdebc;
+      --md-on-secondary-container: #271904;
+      --md-tertiary: #51643f;
+      --md-tertiary-container: #d4eabb;
+      --md-on-tertiary-container: #102004;
+      --md-outline: #817567;
+      --md-outline-variant: #d3c4b4;
+      --md-shadow: 0 8px 28px rgba(40, 26, 5, 0.06);
+    }
+    html[data-palette="amber"][data-theme="dark"] {
+      --md-bg: #17130b;
+      --md-on-bg: #ece1d4;
+      --md-surface: #1b170f;
+      --md-surface-low: #201b13;
+      --md-surface-container: #252017;
+      --md-surface-high: #2f2920;
+      --md-surface-highest: #3a342a;
+      --md-card: #1e1911;
+      --md-on-surface: #ece1d4;
+      --md-on-surface-variant: #d3c4b4;
+      --md-primary: #ffb951;
+      --md-on-primary: #452b00;
+      --md-primary-container: #633f00;
+      --md-on-primary-container: #ffddb3;
+      --md-secondary: #dec2a1;
+      --md-secondary-container: #56442a;
+      --md-on-secondary-container: #fbdebc;
+      --md-tertiary: #b8cea1;
+      --md-tertiary-container: #3a4c2a;
+      --md-on-tertiary-container: #d4eabb;
+      --md-outline: #9c8f80;
+      --md-outline-variant: #4f4539;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    }
+    html[data-palette="amber"][data-theme="oled"] {
+      --md-bg: #000000;
+      --md-on-bg: #f6ede2;
+      --md-surface: #080603;
+      --md-surface-low: #0d0a05;
+      --md-surface-container: #141008;
+      --md-surface-high: #211a0e;
+      --md-surface-highest: #2e2414;
+      --md-card: #090704;
+      --md-on-surface: #f6ede2;
+      --md-on-surface-variant: #cfc0ae;
+      --md-primary: #ffc266;
+      --md-on-primary: #3d2600;
+      --md-primary-container: #593900;
+      --md-on-primary-container: #ffddb3;
+      --md-secondary: #dec2a1;
+      --md-secondary-container: #3d2f1b;
+      --md-on-secondary-container: #fbdebc;
+      --md-tertiary: #b8cea1;
+      --md-tertiary-container: #2b3b1e;
+      --md-on-tertiary-container: #d4eabb;
+      --md-outline: #786b5c;
+      --md-outline-variant: #2f261b;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    /* ---------------- PALETTE 5: CYAN (Океанический Циан) ---------------- */
+    html[data-palette="cyan"][data-theme="light"] {
+      --md-bg: #f4fafe;
+      --md-on-bg: #171c1f;
+      --md-surface: #eef4f8;
+      --md-surface-low: #e8eff3;
+      --md-surface-container: #e3e9ed;
+      --md-surface-high: #dde3e7;
+      --md-surface-highest: #d7dee2;
+      --md-card: #ffffff;
+      --md-on-surface: #171c1f;
+      --md-on-surface-variant: #40484c;
+      --md-primary: #006780;
+      --md-on-primary: #ffffff;
+      --md-primary-container: #b8eaff;
+      --md-on-primary-container: #001f28;
+      --md-secondary: #4c626b;
+      --md-secondary-container: #cfe6f1;
+      --md-on-secondary-container: #071e26;
+      --md-tertiary: #5b5b7e;
+      --md-tertiary-container: #e1dfff;
+      --md-on-tertiary-container: #181837;
+      --md-outline: #70787d;
+      --md-outline-variant: #bfc8cc;
+      --md-shadow: 0 8px 28px rgba(5, 32, 42, 0.06);
+    }
+    html[data-palette="cyan"][data-theme="dark"] {
+      --md-bg: #0e1417;
+      --md-on-bg: #dee3e7;
+      --md-surface: #12181b;
+      --md-surface-low: #171c1f;
+      --md-surface-container: #1b2125;
+      --md-surface-high: #252b2f;
+      --md-surface-highest: #30363a;
+      --md-card: #161c20;
+      --md-on-surface: #dee3e7;
+      --md-on-surface-variant: #bfc8cc;
+      --md-primary: #60d4fe;
+      --md-on-primary: #003544;
+      --md-primary-container: #004d61;
+      --md-on-primary-container: #b8eaff;
+      --md-secondary: #b3cad5;
+      --md-secondary-container: #354a53;
+      --md-on-secondary-container: #cfe6f1;
+      --md-tertiary: #c4c3ea;
+      --md-tertiary-container: #434465;
+      --md-on-tertiary-container: #e1dfff;
+      --md-outline: #899296;
+      --md-outline-variant: #40484c;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    }
+    html[data-palette="cyan"][data-theme="oled"] {
+      --md-bg: #000000;
+      --md-on-bg: #eaf2f7;
+      --md-surface: #040709;
+      --md-surface-low: #070c0f;
+      --md-surface-container: #0a1217;
+      --md-surface-high: #111e26;
+      --md-surface-highest: #182b36;
+      --md-card: #060a0d;
+      --md-on-surface: #eaf2f7;
+      --md-on-surface-variant: #b4c3ca;
+      --md-primary: #5cd6ff;
+      --md-on-primary: #002b38;
+      --md-primary-container: #004659;
+      --md-on-primary-container: #b8eaff;
+      --md-secondary: #b3cad5;
+      --md-secondary-container: #203138;
+      --md-on-secondary-container: #cfe6f1;
+      --md-tertiary: #c4c3ea;
+      --md-tertiary-container: #30314f;
+      --md-on-tertiary-container: #e1dfff;
+      --md-outline: #5c6b73;
+      --md-outline-variant: #1b2a32;
+      --md-shadow: 0 10px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    /* ==========================================================================
+       2. RESET & GLOBAL TYPOGRAPHY
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--md-bg);
+      color: var(--md-on-bg);
+      transition: background-color 0.3s var(--md-easing), color 0.3s var(--md-easing);
+    }
+
+    body {
+      background-color: var(--md-bg);
+      color: var(--md-on-bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    button, input {
+      font-family: inherit;
+      color: inherit;
+      border: none;
+      background: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    svg.icon {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    svg.m3-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      stroke: none;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       3. SPLASH SCREEN (~2.3 SECONDS, ZERO TEXT, PERFECTLY CENTERED ROTATION)
+       ========================================================================== */
+    #splash-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background-color: var(--md-bg);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: opacity 0.45s var(--md-easing), transform 0.45s var(--md-easing), visibility 0.45s;
+    }
+
+    #splash-screen.splash-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: scale(1.04);
+    }
+
+    .splash-minimal-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    /* Strictly centered 168x168 grid container - zero wobble */
+    .splash-emblem-stage {
+      position: relative;
+      width: 168px;
+      height: 168px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .splash-layer-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--md-primary) 0%, transparent 70%);
+      opacity: 0.32;
+      animation: ambientPulse 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .splash-layer-scallop {
+      position: absolute;
+      inset: 8px;
+      width: 152px;
+      height: 152px;
+      animation: spinCW 12s linear infinite;
+      transform-origin: 50% 50%;
+      pointer-events: none;
+    }
+
+    .splash-layer-ring {
+      position: absolute;
+      inset: 0;
+      width: 168px;
+      height: 168px;
+      animation: spinCCW 18s linear infinite;
+      transform-origin: 50% 50%;
+      pointer-events: none;
+    }
+
+    .splash-core-icon {
+      position: relative;
+      z-index: 2;
+      width: 72px;
+      height: 72px;
+      border-radius: 24px;
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+      border: 1px solid var(--md-outline-variant);
+    }
+
+    @keyframes spinCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spinCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    @keyframes ambientPulse {
+      0%, 100% { transform: scale(0.92); opacity: 0.22; }
+      50% { transform: scale(1.08); opacity: 0.42; }
+    }
+
+    .splash-progress-track {
+      height: 6px;
+      width: 148px;
+      background: var(--md-surface-high);
+      border-radius: 999px;
+      overflow: hidden;
+      padding: 1px;
+    }
+
+    .splash-progress-fill {
+      height: 100%;
+      width: 8%;
+      background: var(--md-primary);
+      border-radius: 999px;
+      transition: width 0.22s ease-out;
+    }
+
+    /* ==========================================================================
+       4. APP SHELL LAYOUT (LEFT SIDEBAR DRAWER/RAIL + MAIN VIEWPORT)
+       ========================================================================== */
+    .app-shell {
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* Left Navigation Sidebar */
+    .app-sidebar {
+      width: var(--sidebar-width);
+      flex-shrink: 0;
+      background: var(--md-surface-low);
+      border-right: 1px solid var(--md-outline-variant);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      z-index: 40;
+      transition: width 0.28s var(--md-easing), transform 0.28s var(--md-easing), background-color 0.3s;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    .app-sidebar.collapsed {
+      width: var(--sidebar-rail-width);
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--md-outline-variant);
+      flex-shrink: 0;
+    }
+
+    .app-sidebar.collapsed .sidebar-header {
+      justify-content: center;
+      padding: 14px 8px;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      cursor: pointer;
+    }
+
+    .app-sidebar.collapsed .brand-box {
+      display: none;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--md-on-surface-variant);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .icon-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--md-surface-high);
+      color: var(--md-on-surface);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .icon-btn:hover {
+      background: var(--md-surface-highest);
+    }
+
+    .sidebar-scroll {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-group-label {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--md-on-surface-variant);
+      padding: 0 12px;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .app-sidebar.collapsed .sidebar-group-label,
+    .app-sidebar.collapsed .nav-label,
+    .app-sidebar.collapsed .nav-badge,
+    .app-sidebar.collapsed .triumvirate-card,
+    .app-sidebar.collapsed .sidebar-footer-expanded {
+      display: none !important;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-pill {
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--md-on-surface-variant);
+      text-align: left;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-pill:hover {
+      background: var(--md-surface-high);
+      color: var(--md-on-surface);
+    }
+
+    .nav-pill.active {
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+      font-weight: 800;
+    }
+
+    .app-sidebar.collapsed .nav-pill {
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    .nav-pill-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .nav-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--md-surface-high);
+      color: var(--md-on-surface);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .nav-pill.active .nav-badge {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+
+    .roman-box {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      background: var(--md-surface-high);
+      color: var(--md-on-surface);
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .nav-pill.active .roman-box {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: var(--md-outline-variant);
+      margin: 2px 0;
+    }
+
+    .triumvirate-card {
+      padding: 14px;
+      border-radius: 20px;
+      background: var(--md-surface-container);
+      border: 1px solid var(--md-outline-variant);
+      font-size: 11.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .triumvirate-card-title {
+      font-weight: 800;
+      color: var(--md-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+    }
+
+    .sidebar-footer {
+      padding: 12px;
+      border-top: 1px solid var(--md-outline-variant);
+      background: var(--md-surface);
+      flex-shrink: 0;
+    }
+
+    .theme-segmented {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      background: var(--md-surface-container);
+      border: 1px solid var(--md-outline-variant);
+      margin-bottom: 10px;
+    }
+
+    .theme-seg-btn {
+      padding: 6px 4px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--md-on-surface-variant);
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .theme-seg-btn.active {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+
+    .palette-dots-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      padding: 4px 6px;
+    }
+
+    .palette-dot {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .palette-dot:hover {
+      transform: scale(1.12);
+    }
+    .palette-dot.active {
+      border-color: var(--md-on-surface);
+      box-shadow: 0 0 0 3px var(--md-primary-container);
+      transform: scale(1.12);
+    }
+
+    .sidebar-palette-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 9px 12px;
+      border-radius: 14px;
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .sidebar-palette-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .sidebar-footer-collapsed {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .app-sidebar.collapsed .sidebar-footer-collapsed {
+      display: flex;
+    }
+
+    /* ==========================================================================
+       5. MAIN VIEWPORT & STICKY TOP APP BAR
+       ========================================================================== */
+    .app-main {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 90px;
+    }
+
+    .top-app-bar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: var(--md-surface);
+      border-bottom: 1px solid var(--md-outline-variant);
+      padding: 10px 20px;
+    }
+
+    .top-bar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mobile-menu-trigger {
+      display: none;
+    }
+
+    .top-title-group {
+      min-width: 0;
+    }
+
+    .top-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-title {
+      font-size: 16px;
+      font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .status-pill {
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .top-subtitle {
+      font-size: 11.5px;
+      color: var(--md-on-surface-variant);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Search Bar M3 */
+    .search-box {
+      flex: 1;
+      max-width: 520px;
+      height: 44px;
+      border-radius: 999px;
+      background: var(--md-surface-high);
+      border: 1.5px solid transparent;
+      padding: 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--md-primary);
+      background: var(--md-card);
+    }
+
+    .search-input {
+      flex: 1;
+      width: 100%;
+      font-size: 13.5px;
+      outline: none;
+      color: var(--md-on-surface);
+    }
+
+    .search-input::placeholder {
+      color: var(--md-on-surface-variant);
+      opacity: 0.75;
+    }
+
+    .search-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      white-space: nowrap;
+    }
+
+    .top-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .pill-btn {
+      height: 40px;
+      padding: 0 16px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      transition: transform 0.15s, opacity 0.2s, background 0.2s;
+    }
+    .pill-btn:hover {
+      transform: translateY(-1px);
+    }
+    .pill-btn-primary {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+    .pill-btn-tonal {
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+    }
+    .pill-btn-surface {
+      background: var(--md-surface-container);
+      color: var(--md-on-surface);
+      border: 1px solid var(--md-outline-variant);
+    }
+    .pill-btn-surface:hover {
+      background: var(--md-surface-high);
+    }
+
+    /* ==========================================================================
+       6. HERO BANNER & CONTROLS TOOLBAR
+       ========================================================================== */
+    .content-container {
+      max-width: 1180px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 28px;
+      background: var(--md-surface-container);
+      border: 1px solid var(--md-outline-variant);
+      margin-bottom: 20px;
+      box-shadow: var(--md-shadow);
+    }
+
+    .hero-top-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .m3-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 800;
+    }
+    .m3-tag-primary {
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+    }
+    .m3-tag-secondary {
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+    }
+    .m3-tag-tertiary {
+      background: var(--md-tertiary-container);
+      color: var(--md-on-tertiary-container);
+    }
+
+    .hero-title {
+      font-size: clamp(22px, 3.4vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+
+    .hero-title span {
+      color: var(--md-primary);
+    }
+
+    .hero-desc {
+      font-size: 14px;
+      color: var(--md-on-surface-variant);
+      max-width: 780px;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+    }
+
+    .stat-box {
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: var(--md-card);
+      border: 1px solid var(--md-outline-variant);
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .stat-box:hover {
+      transform: translateY(-2px);
+      border-color: var(--md-primary);
+    }
+
+    .stat-num {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--md-primary);
+      margin-bottom: 2px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .stat-sub {
+      font-size: 11px;
+      color: var(--md-on-surface-variant);
+    }
+
+    /* Mode & Typography Toolbar */
+    .toolbar-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .typo-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .font-group {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px;
+      border-radius: 999px;
+      background: var(--md-surface-container);
+      border: 1px solid var(--md-outline-variant);
+    }
+
+    .font-btn {
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--md-on-surface-variant);
+    }
+    .font-btn.active {
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+    }
+
+    /* ==========================================================================
+       7. SECTIONS & ARTICLE CARDS (M3 EXPRESSIVE SURFACES)
+       ========================================================================== */
+    .sections-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .section-block {
+      scroll-margin-top: 84px;
+    }
+
+    .section-header-bar {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 22px;
+      background: var(--md-surface-container);
+      border: 1px solid var(--md-outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      text-align: left;
+      margin-bottom: 14px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .section-header-bar:hover {
+      background: var(--md-surface-high);
+      border-color: var(--md-outline);
+    }
+
+    .section-header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .section-roman-pill {
+      padding: 6px 12px;
+      border-radius: 12px;
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .section-title-text {
+      font-size: clamp(14px, 2vw, 17px);
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .section-chevron-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--md-surface-low);
+      color: var(--md-primary);
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+      border: 1px solid var(--md-outline-variant);
+    }
+
+    .articles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .article-card {
+      border-radius: 26px;
+      background: var(--md-card);
+      border: 1px solid var(--md-outline-variant);
+      padding: 22px;
+      box-shadow: var(--md-shadow);
+      scroll-margin-top: 92px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .article-card:hover {
+      border-color: var(--md-outline);
+    }
+
+    .article-card.highlight-pulse {
+      border-color: var(--md-primary);
+      box-shadow: 0 0 0 3px var(--md-primary-container);
+    }
+
+    .article-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .article-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .art-num-badge {
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+      font-size: 11.5px;
+      font-weight: 800;
+    }
+
+    .art-sec-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--md-on-surface-variant);
+    }
+
+    .article-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .art-action-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--md-surface-low);
+      color: var(--md-on-surface-variant);
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--md-outline-variant);
+      transition: all 0.2s;
+    }
+    .art-action-btn:hover {
+      background: var(--md-surface-high);
+      color: var(--md-on-surface);
+    }
+    .art-action-btn.bookmarked {
+      background: var(--md-primary-container);
+      color: var(--md-primary);
+      border-color: var(--md-primary);
+    }
+
+    .article-title {
+      font-size: clamp(17px, 2.2vw, 20px);
+      font-weight: 800;
+      margin-bottom: 14px;
+      line-height: 1.35;
+      cursor: pointer;
+    }
+
+    .article-card.article-collapsed .article-title {
+      margin-bottom: 0;
+    }
+
+    .article-clauses {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .clause-box {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--md-surface-low);
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .clause-box:hover {
+      border-color: var(--md-outline-variant);
+    }
+
+    .clause-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .clause-index {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--md-surface-high);
+      color: var(--md-on-surface);
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .clause-text {
+      font-size: var(--doc-font-size);
+      line-height: var(--doc-line-height);
+      flex: 1;
+    }
+
+    .clause-sublist {
+      list-style: none;
+      margin-top: 10px;
+      margin-left: 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .clause-sublist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: var(--doc-font-size);
+      line-height: var(--doc-line-height);
+    }
+
+    .clause-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--md-primary);
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+
+    .article-footer {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--md-outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11.5px;
+      color: var(--md-on-surface-variant);
+    }
+
+    .art-footer-btn {
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--md-surface-low);
+      color: var(--md-on-surface);
+      font-size: 11.5px;
+      font-weight: 700;
+      border: 1px solid var(--md-outline-variant);
+      transition: background 0.2s;
+    }
+    .art-footer-btn:hover {
+      background: var(--md-surface-high);
+    }
+
+    mark.hl {
+      background: #facc15;
+      color: #0f172a;
+      padding: 1px 5px;
+      border-radius: 5px;
+      font-weight: 800;
+    }
+
+    /* ==========================================================================
+       8. MODALS, PALETTE PICKER, FOCUS DIALOG, SNACKBAR & MOBILE BAR
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-dialog {
+      width: 100%;
+      max-width: 560px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 28px;
+      background: var(--md-surface-container);
+      border: 1px solid var(--md-outline-variant);
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .focus-dialog {
+      max-width: 760px;
+    }
+
+    .palette-option-btn {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: var(--md-surface-low);
+      border: 2px solid var(--md-outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-align: left;
+      margin-bottom: 8px;
+      transition: all 0.2s;
+    }
+    .palette-option-btn:hover {
+      background: var(--md-surface-high);
+    }
+    .palette-option-btn.active {
+      border-color: var(--md-primary);
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+    }
+
+    .palette-swatch-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .palette-check-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--md-surface-high);
+      color: var(--md-on-surface-variant);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .palette-option-btn.active .palette-check-badge {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+
+    .snackbar {
+      position: fixed;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      z-index: 120;
+      padding: 12px 20px;
+      border-radius: 16px;
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      border: 1px solid var(--md-primary);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+    .snackbar.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Mobile Bottom Navigation Bar */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      inset-x: 0;
+      z-index: 45;
+      background: var(--md-surface-container);
+      border-top: 1px solid var(--md-outline-variant);
+      padding: 6px 8px;
+      justify-content: space-around;
+    }
+
+    .mob-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--md-on-surface-variant);
+      padding: 4px 8px;
+      border-radius: 14px;
+    }
+    .mob-nav-item.active {
+      color: var(--md-primary);
+    }
+
+    .mobile-drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 39;
+      display: none;
+    }
+    .mobile-drawer-backdrop.open {
+      display: block;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 960px) {
+      .app-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 296px !important;
+        transform: translateX(-105%);
+      }
+      .app-sidebar.mobile-open {
+        transform: translateX(0);
+      }
+      .mobile-menu-trigger {
+        display: grid;
+      }
+      .mobile-bottom-nav {
+        display: flex;
+      }
+      .hide-mobile {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. INITIAL LOADING SCREEN (~2.3 SECONDS, ZERO TEXT, CLICK TO DISMISS)
+       ========================================================================== -->
+  <div id="splash-screen" onclick="hideSplashScreen()" aria-hidden="true">
+    <div class="splash-minimal-wrap">
+      <div class="splash-emblem-stage">
+        <div class="splash-layer-glow"></div>
+
+        <!-- Rotating Symmetrical 12-Lobe Scallop (Centered at 100,100 in 200x200) -->
+        <svg class="splash-layer-scallop" viewBox="0 0 200 200" fill="none">
+          <path
+            id="splash-scallop-path"
+            fill="var(--md-primary-container)"
+            stroke="var(--md-primary)"
+            stroke-width="3.5"
+          />
+        </svg>
+
+        <!-- Counter-Rotating Dashed Ring (Centered at 100,100 in 200x200) -->
+        <svg class="splash-layer-ring" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="92" stroke="var(--md-primary)" stroke-width="2" stroke-dasharray="8 10" opacity="0.55" />
+          <circle cx="100" cy="100" r="64" stroke="var(--md-on-primary-container)" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.3" />
+        </svg>
+
+        <!-- Static Centered Parliament Emblem -->
+        <div class="splash-core-icon">
+          <svg class="icon" style="width:36px;height:36px" viewBox="0 0 24 24">
+            <path d="M3 21h18M4 18h16M6 18v-7m4 7v-7m4 7v-7m4 7v-7M12 3l9 5H3l9-5z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="splash-progress-track">
+        <div id="splash-progress-bar" class="splash-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Backdrop for Slide-Over Sidebar -->
+  <div id="mobile-drawer-backdrop" class="mobile-drawer-backdrop" onclick="closeMobileSidebar()"></div>
+
+  <!-- ==========================================================================
+       2. MAIN APPLICATION SHELL
+       ========================================================================== -->
+  <div class="app-shell">
+
+    <!-- LEFT NAVIGATION SIDEBAR (Material 3 Drawer / Collapsible Rail) -->
+    <aside id="app-sidebar" class="app-sidebar">
+      <!-- Pinned Header -->
+      <div class="sidebar-header">
+        <div class="brand-box" onclick="filterBySection('all'); closeMobileSidebar();">
+          <div class="brand-icon">
+            <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path d="M3 21h18M4 18h16M6 18v-7m4 7v-7m4 7v-7m4 7v-7M12 3l9 5H3l9-5z" />
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">Парламент Мальдении</div>
+            <div class="brand-sub">Официальный Регламент</div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="icon-btn"
+          onclick="toggleSidebarCollapse()"
+          title="Свернуть / развернуть боковую панель"
+        >
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h10" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scrollable Navigation Content -->
+      <div class="sidebar-scroll">
+        <!-- Group 1: Main Modes -->
+        <div>
+          <div class="sidebar-group-label">
+            <span>Документ</span>
+          </div>
+          <div class="nav-list">
+            <button type="button" id="nav-mode-all" class="nav-pill active" onclick="filterBySection('all'); closeMobileSidebar();">
+              <div class="nav-pill-left">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <span class="nav-label">Все статьи (20)</span>
+              </div>
+              <span class="nav-badge mono">20</span>
+            </button>
+
+            <button type="button" id="nav-mode-bookmarks" class="nav-pill" onclick="filterBySection('bookmarks'); closeMobileSidebar();">
+              <div class="nav-pill-left">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <span class="nav-label">Закладки</span>
+              </div>
+              <span id="sidebar-bookmark-badge" class="nav-badge mono">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Group 2: Regulation Sections I - VII -->
+        <div>
+          <div class="sidebar-group-label">
+            <span>Разделы Регламента</span>
+            <span class="mono">I-VII</span>
+          </div>
+          <div id="sidebar-sections-list" class="nav-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Triumvirate Reference Box -->
+        <div class="triumvirate-card">
+          <div class="triumvirate-card-title">
+            <span>★ Вышестоящие лица (Ст. 4)</span>
+          </div>
+          <div>• <strong>Президент</strong> - гарант Конституции</div>
+          <div>• <strong>Верховный Канцлер</strong> - Председатель «ПНЕМ»</div>
+          <div>• <strong>Премьер-министр</strong> - Председатель «Другой Мальдении»</div>
+        </div>
+      </div>
+
+      <!-- Pinned Sidebar Footer (Themes & Palettes) -->
+      <div class="sidebar-footer">
+        <div class="sidebar-footer-expanded">
+          <div class="theme-segmented">
+            <button type="button" id="side-theme-light" class="theme-seg-btn" onclick="setTheme('light')">Светлая</button>
+            <button type="button" id="side-theme-dark" class="theme-seg-btn active" onclick="setTheme('dark')">Тёмная</button>
+            <button type="button" id="side-theme-oled" class="theme-seg-btn" onclick="setTheme('oled')">OLED</button>
+          </div>
+
+          <div class="palette-dots-row">
+            <button type="button" class="palette-dot" data-pal="indigo" style="background:#374cd7" onclick="setPalette('indigo')" title="1. Государственный Индиго">✓</button>
+            <button type="button" class="palette-dot" data-pal="emerald" style="background:#096b49" onclick="setPalette('emerald')" title="2. Изумрудный Суверенитет"></button>
+            <button type="button" class="palette-dot" data-pal="crimson" style="background:#983256" onclick="setPalette('crimson')" title="3. Имперский Пурпур"></button>
+            <button type="button" class="palette-dot" data-pal="amber" style="background:#b47400" onclick="setPalette('amber')" title="4. Золотой Триумвират"></button>
+            <button type="button" class="palette-dot" data-pal="cyan" style="background:#006780" onclick="setPalette('cyan')" title="5. Океанический Циан"></button>
+          </div>
+
+          <button type="button" class="sidebar-palette-btn" onclick="openPaletteModal()">
+            <svg class="m3-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.2-.64-1.67-.08-.1-.13-.21-.13-.33 0-.28.22-.5.5-.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8 8 8.67 8 9.5 7.33 11 6.5 11zm3-4C8.67 7 8 6.33 8 5.5S8.67 4 9.5 4s1.5.67 1.5 1.5S10.33 7 9.5 7zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 4 14.5 4s1.5.67 1.5 1.5S15.33 7 14.5 7zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Палитра и тема</span>
+          </button>
+        </div>
+
+        <div class="sidebar-footer-collapsed">
+          <button type="button" class="icon-btn" onclick="cycleTheme()" title="Сменить тему (Светлая / Тёмная / OLED)">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button type="button" class="icon-btn" onclick="openPaletteModal()" title="Палитра и тема Material You">
+            <svg class="m3-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.2-.64-1.67-.08-.1-.13-.21-.13-.33 0-.28.22-.5.5-.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8 8 8.67 8 9.5 7.33 11 6.5 11zm3-4C8.67 7 8 6.33 8 5.5S8.67 4 9.5 4s1.5.67 1.5 1.5S10.33 7 9.5 7zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 4 14.5 4s1.5.67 1.5 1.5S15.33 7 14.5 7zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="app-main">
+      <!-- Sticky Top App Bar -->
+      <header class="top-app-bar">
+        <div class="top-bar-inner">
+          <div class="top-bar-left">
+            <button type="button" class="icon-btn mobile-menu-trigger" onclick="openMobileSidebar()" title="Открыть меню разделов">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <div class="top-title-group">
+              <div class="top-title-row">
+                <span class="top-title">Регламент Парламента РМ</span>
+                <span id="top-filter-badge" class="status-pill hide-mobile">Все разделы (20)</span>
+              </div>
+              <div class="top-subtitle hide-mobile">Высший однопалатный представительный и законодательный орган</div>
+            </div>
+          </div>
+
+          <!-- Instant Search Box -->
+          <div class="search-box">
+            <svg class="icon" style="color:var(--md-on-surface-variant)" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input
+              id="search-input"
+              type="text"
+              class="search-input"
+              placeholder="Поиск по статьям, номерам, терминам (ПНЕМ, вето, 10 минут)..."
+              oninput="onSearchInput(this.value)"
+            />
+            <span id="search-count-badge" class="search-badge mono hidden">0</span>
+            <button
+              type="button"
+              id="search-clear-btn"
+              class="icon-btn hidden"
+              style="width:28px;height:28px;border-radius:50%"
+              onclick="clearSearchInput()"
+              title="Очистить поиск"
+            >✕</button>
+          </div>
+
+          <!-- Right Actions -->
+          <div class="top-bar-actions">
+            <button
+              type="button"
+              class="icon-btn"
+              onclick="replaySplashScreen()"
+              title="Повторить заставку"
+            >
+              <svg class="icon" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+            </button>
+
+            <button
+              type="button"
+              id="open-palette-btn"
+              class="pill-btn pill-btn-tonal"
+              onclick="openPaletteModal()"
+              title="Выбрать цветовую палитру Material You и тему"
+            >
+              <svg class="m3-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.2-.64-1.67-.08-.1-.13-.21-.13-.33 0-.28.22-.5.5-.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8 8 8.67 8 9.5 7.33 11 6.5 11zm3-4C8.67 7 8 6.33 8 5.5S8.67 4 9.5 4s1.5.67 1.5 1.5S10.33 7 9.5 7zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 4 14.5 4s1.5.67 1.5 1.5S15.33 7 14.5 7zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+              <span class="hide-mobile">Палитра и тема</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Viewport Container -->
+      <main class="content-container">
+
+        <!-- Hero Card -->
+        <section class="hero-card">
+          <div class="hero-top-tags">
+            <span class="m3-tag m3-tag-primary">Акт высшей процессуальной силы (Ст. 1)</span>
+            <span class="m3-tag m3-tag-secondary">ЕГИКС Парламента (Ст. 2)</span>
+            <span class="m3-tag m3-tag-tertiary">Правило Трёх Главных Подписей (Ст. 16)</span>
+          </div>
+
+          <h2 class="hero-title">
+            Регламент Парламента <span>Республики Мальдения</span>
+          </h2>
+          <p class="hero-desc">
+            Однопалатный представительный и единственный законодательный орган государственной власти Республики Мальдения. Институт постоянного Президиума или Спикера не учреждается, руководство и конституционный контроль осуществляются непосредственно <strong>Вышестоящими должностными лицами</strong>.
+          </p>
+
+          <div class="hero-stats-grid">
+            <div class="stat-box" onclick="filterBySection('all');">
+              <div class="stat-num mono">7 разделов • 20 ст.</div>
+              <div class="stat-label">Полный свод норм</div>
+              <div class="stat-sub">Все статьи без сокращений</div>
+            </div>
+            <div class="stat-box" onclick="jumpToArticle(4)">
+              <div class="stat-num mono">3 Вышестоящих лица</div>
+              <div class="stat-label">Триумвират РМ (Ст. 4)</div>
+              <div class="stat-sub">Президент, Канцлер, Премьер</div>
+            </div>
+            <div class="stat-box" onclick="jumpToArticle(6)">
+              <div class="stat-num mono">2 партии в системе</div>
+              <div class="stat-label">«ПНЕМ» и «Другая Мальдения»</div>
+              <div class="stat-sub">И независимые депутаты (Ст. 5-6)</div>
+            </div>
+            <div class="stat-box" onclick="jumpToArticle(16)">
+              <div class="stat-num mono">3 Главные Подписи</div>
+              <div class="stat-label">Триумвиратная ратификация</div>
+              <div class="stat-sub">Перейти к Статье 16 →</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Typography & Section Collapse/Expand Controls Toolbar -->
+        <div class="toolbar-row">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span style="font-size:14px;font-weight:800">Нормативный текст Регламента (Статьи 1-20)</span>
+          </div>
+
+          <div id="article-controls-bar" class="typo-controls">
+            <div class="font-group" title="Размер текста статей">
+              <button type="button" id="font-90" class="font-btn" onclick="setDocFontSize('90')">90%</button>
+              <button type="button" id="font-100" class="font-btn active" onclick="setDocFontSize('100')">100%</button>
+              <button type="button" id="font-115" class="font-btn" onclick="setDocFontSize('115')">115%</button>
+              <button type="button" id="font-130" class="font-btn" onclick="setDocFontSize('130')">130%</button>
+            </div>
+
+            <button
+              type="button"
+              class="pill-btn pill-btn-surface"
+              style="height:36px;font-size:12px"
+              onclick="collapseAllSections()"
+            >
+              <span>▲ Свернуть разделы</span>
+            </button>
+
+            <button
+              type="button"
+              class="pill-btn pill-btn-surface"
+              style="height:36px;font-size:12px"
+              onclick="expandAllSections()"
+            >
+              <span>▼ Развернуть разделы</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             ARTICLES VIEW (ALL 7 SECTIONS & 20 ARTICLES)
+             ==================================================================== -->
+        <div id="view-articles">
+          <!-- Stream of Sections and Articles -->
+          <div id="articles-stream" class="sections-stream">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       3. MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav">
+    <button type="button" id="mob-tab-articles" class="mob-nav-item active" onclick="filterBySection('all');">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Все статьи</span>
+    </button>
+    <button type="button" class="mob-nav-item" onclick="openMobileSidebar()">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      <span>Разделы</span>
+    </button>
+    <button type="button" id="mob-tab-bookmarks" class="mob-nav-item" onclick="filterBySection('bookmarks');">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      <span>Закладки</span>
+    </button>
+    <button type="button" id="mob-tab-palette" class="mob-nav-item" onclick="openPaletteModal()">
+      <svg class="m3-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.2-.64-1.67-.08-.1-.13-.21-.13-.33 0-.28.22-.5.5-.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8 8 8.67 8 9.5 7.33 11 6.5 11zm3-4C8.67 7 8 6.33 8 5.5S8.67 4 9.5 4s1.5.67 1.5 1.5S10.33 7 9.5 7zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 4 14.5 4s1.5.67 1.5 1.5S15.33 7 14.5 7zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+      </svg>
+      <span>Палитра</span>
+    </button>
+  </nav>
+
+  <!-- ==========================================================================
+       4. APPEARANCE & PALETTE MODAL (#paletteModal: 5 PALETTES + LIGHT/DARK/OLED + FONT SCALE)
+       ========================================================================== -->
+  <div id="paletteModal" class="modal-backdrop" onclick="if(event.target===this) closePaletteModal()">
+    <div class="modal-dialog">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+        <div>
+          <h3 style="font-size:19px;font-weight:800">Цветовая палитра и тема Material You</h3>
+          <p style="font-size:12px;color:var(--md-on-surface-variant)">Динамическое оформление интерфейса Регламента Парламента</p>
+        </div>
+        <button type="button" class="icon-btn" onclick="closePaletteModal()" title="Закрыть">✕</button>
+      </div>
+
+      <!-- 3 Theme Modes -->
+      <div style="margin-bottom:18px">
+        <div style="font-size:11px;font-weight:800;text-transform:uppercase;color:var(--md-on-surface-variant);margin-bottom:8px">
+          1. Режим темы (Светлая / Тёмная / OLED)
+        </div>
+        <div class="theme-segmented">
+          <button type="button" id="mod-theme-light" class="theme-seg-btn" onclick="setTheme('light')">☀ Светлая</button>
+          <button type="button" id="mod-theme-dark" class="theme-seg-btn active" onclick="setTheme('dark')">☾ Тёмная</button>
+          <button type="button" id="mod-theme-oled" class="theme-seg-btn" onclick="setTheme('oled')">● OLED Чёрная</button>
+        </div>
+      </div>
+
+      <!-- 5 Material You Color Palettes -->
+      <div style="margin-bottom:18px">
+        <div style="font-size:11px;font-weight:800;text-transform:uppercase;color:var(--md-on-surface-variant);margin-bottom:8px">
+          2. Цветовая палитра Material You (5 палитр на выбор)
+        </div>
+
+        <button type="button" id="pal-card-indigo" class="palette-option-btn active" onclick="setPalette('indigo')">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="palette-swatch-circle" style="background:linear-gradient(135deg,#374cd7 50%,#b8c4ff 50%)"></span>
+            <div>
+              <div style="font-weight:800;font-size:13.5px">1. Государственный Индиго (Indigo / Sapphire)</div>
+              <div style="font-size:11.5px;opacity:0.8">Официальный сапфирово-синий стиль Парламента</div>
+            </div>
+          </div>
+          <span id="pal-check-indigo" class="palette-check-badge">✓</span>
+        </button>
+
+        <button type="button" id="pal-card-emerald" class="palette-option-btn" onclick="setPalette('emerald')">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="palette-swatch-circle" style="background:linear-gradient(135deg,#096b49 50%,#82d7ac 50%)"></span>
+            <div>
+              <div style="font-weight:800;font-size:13.5px">2. Изумрудный Суверенитет (Emerald)</div>
+              <div style="font-size:11.5px;opacity:0.8">Спокойная изумрудно-мятная парламентская палитра</div>
+            </div>
+          </div>
+          <span id="pal-check-emerald" class="palette-check-badge"></span>
+        </button>
+
+        <button type="button" id="pal-card-crimson" class="palette-option-btn" onclick="setPalette('crimson')">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="palette-swatch-circle" style="background:linear-gradient(135deg,#983256 50%,#ffb0c8 50%)"></span>
+            <div>
+              <div style="font-weight:800;font-size:13.5px">3. Имперский Пурпур (Crimson / Purple)</div>
+              <div style="font-size:11.5px;opacity:0.8">Выразительный пурпурно-рубиновый государственный тон</div>
+            </div>
+          </div>
+          <span id="pal-check-crimson" class="palette-check-badge"></span>
+        </button>
+
+        <button type="button" id="pal-card-amber" class="palette-option-btn" onclick="setPalette('amber')">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="palette-swatch-circle" style="background:linear-gradient(135deg,#825500 50%,#ffb951 50%)"></span>
+            <div>
+              <div style="font-weight:800;font-size:13.5px">4. Золотой Триумвират (Amber Gold)</div>
+              <div style="font-size:11.5px;opacity:0.8">Тёплый янтарно-золотой конституционный акцент</div>
+            </div>
+          </div>
+          <span id="pal-check-amber" class="palette-check-badge"></span>
+        </button>
+
+        <button type="button" id="pal-card-cyan" class="palette-option-btn" onclick="setPalette('cyan')">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="palette-swatch-circle" style="background:linear-gradient(135deg,#006780 50%,#60d4fe 50%)"></span>
+            <div>
+              <div style="font-weight:800;font-size:13.5px">5. Океанический Циан (Ocean Teal)</div>
+              <div style="font-size:11.5px;opacity:0.8">Чистый лазурно-бирюзовый стиль информационных систем</div>
+            </div>
+          </div>
+          <span id="pal-check-cyan" class="palette-check-badge"></span>
+        </button>
+      </div>
+
+      <!-- Font Scale Setting -->
+      <div style="margin-bottom:20px">
+        <div style="font-size:11px;font-weight:800;text-transform:uppercase;color:var(--md-on-surface-variant);margin-bottom:8px">
+          3. Размер шрифта статей Регламента
+        </div>
+        <div class="theme-segmented" style="grid-template-columns:repeat(4,1fr)">
+          <button type="button" id="mod-font-90" class="theme-seg-btn" onclick="setDocFontSize('90')">90%</button>
+          <button type="button" id="mod-font-100" class="theme-seg-btn active" onclick="setDocFontSize('100')">100%</button>
+          <button type="button" id="mod-font-115" class="theme-seg-btn" onclick="setDocFontSize('115')">115%</button>
+          <button type="button" id="mod-font-130" class="theme-seg-btn" onclick="setDocFontSize('130')">130%</button>
+        </div>
+      </div>
+
+      <button type="button" class="pill-btn pill-btn-primary" style="width:100%;justify-content:center" onclick="closePaletteModal()">
+        Готово
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       5. FOCUS / SPEAKER TRIBUNE MODAL FOR SINGLE ARTICLE
+       ========================================================================== -->
+  <div id="focus-modal" class="modal-backdrop" onclick="if(event.target===this) closeFocusModal()">
+    <div class="modal-dialog focus-dialog">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--md-outline-variant)">
+        <span id="focus-sec-badge" class="m3-tag m3-tag-primary">РАЗДЕЛ I</span>
+        <div style="display:flex;gap:8px">
+          <button type="button" id="focus-copy-btn" class="pill-btn pill-btn-surface" style="height:36px">Скопировать статью</button>
+          <button type="button" class="icon-btn" onclick="closeFocusModal()">✕</button>
+        </div>
+      </div>
+
+      <div style="margin:18px 0">
+        <h2 id="focus-title" style="font-size:22px;font-weight:800;margin-bottom:14px;line-height:1.3"></h2>
+        <div id="focus-body" class="article-clauses"></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--md-outline-variant)">
+        <button type="button" id="focus-prev-btn" class="pill-btn pill-btn-surface">← Предыдущая</button>
+        <span id="focus-counter" class="mono" style="font-size:12px;color:var(--md-on-surface-variant)">Статья 1 / 20</span>
+        <button type="button" id="focus-next-btn" class="pill-btn pill-btn-primary">Следующая →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Snackbar Notification -->
+  <div id="snackbar" class="snackbar">Скопировано в буфер обмена</div>
+
+  <!-- ==========================================================================
+       6. COMPLETE JAVASCRIPT ENGINE (100% SELF-CONTAINED & ERROR-SAFE)
+       ========================================================================== -->
+  <script>
+    // Complete word-for-word Regulation Data (Sections I-VII, Articles 1-20)
+    const REGULATION_DATA = [
+      {
+        sectionId: 1,
+        roman: "РАЗДЕЛ I",
+        shortTitle: "Общие положения",
+        title: "ОБЩИЕ ПОЛОЖЕНИЯ И КОНСТИТУЦИОННО-ПРАВОВОЙ СТАТУС",
+        articles: [
+          {
+            number: 1,
+            title: "Статья 1. Правовой статус Парламента Республики Мальдения",
+            blocks: [
+              { text: "Парламент Республики Мальдения (далее - Парламент) является высшим однопалатным представительным и единственным законодательным органом государственной власти Республики Мальдения." },
+              { text: "Порядок организации, деятельности, внутренней структуры и осуществления конституционных полномочий Парламента определяется Конституцией Республики Мальдения, конституционными законами и настоящим Регламентом." },
+              { text: "Настоящий Регламент имеет силу нормативно-правового акта высшей процессуальной значимости. Любое решение Парламента, принятое с нарушением императивных норм настоящего Регламента, признаётся юридически ничтожным с момента его принятия и не порождает правовых последствий." }
+            ]
+          },
+          {
+            number: 2,
+            title: "Статья 2. Принципы парламентской деятельности",
+            blocks: [
+              { text: "Деятельность Парламента основывается на принципах верховенства права, политического плюрализма, коллективного свободного обсуждения вопросов, строгой процессуальной последовательности и безусловной гласности внутри депутатского корпуса." },
+              { text: "Заседания, прения, документооборот, регистрация законопроектов и волеизъявление членов Парламента осуществляются посредством Единой государственной информационно-коммуникационной системы Парламента (далее - ЕГИКС Парламента), обеспечивающей непрерывную фиксацию протоколов, верификацию личности участников и неизменность архивных записей." }
+            ]
+          },
+          {
+            number: 3,
+            title: "Статья 3. Отсутствие коллегиального президиума и система управления",
+            blocks: [
+              { text: "В структуре Парламента Республики Мальдения институт постоянного коллегиального Президиума или единоличного Спикера не учреждается." },
+              { text: "Высшие функции организационно-распорядительного руководства, координации законодательного процесса, модерации пленарных заседаний и конституционного контроля за соблюдением настоящего Регламента осуществляются непосредственно Вышестоящими должностными лицами Республики Мальдения (далее - Вышестоящие лица)." }
+            ]
+          }
+        ]
+      },
+      {
+        sectionId: 2,
+        roman: "РАЗДЕЛ II",
+        shortTitle: "Субъекты и фракции",
+        title: "СУБЪЕКТЫ ПАРЛАМЕНТСКОГО ПРАВА И ФРАКЦИОННОЕ УСТРОЙСТВО",
+        articles: [
+          {
+            number: 4,
+            title: "Статья 4. Вышестоящие должностные лица Республики Мальдения",
+            blocks: [
+              {
+                text: "Особым конституционно-регламентным статусом Вышестоящих лиц в Парламенте наделяются три высших должностных лица государства:",
+                list: [
+                  "Президент Республики Мальдения - глава государства и гарант конституционного правопорядка;",
+                  "Верховный Канцлер Республики Мальдения - высшее должностное лицо политико-административного управления Республики;",
+                  "Премьер-министр Республики Мальдения - глава исполнительной власти и Председатель Правительства Республики Мальдения."
+                ]
+              },
+              { text: "Вышестоящие лица обладают правом внеочередного выступления на пленарных заседаниях, правом процессуального ведения сессий, правом наложения дисциплинарных взысканий на месте, а также исключительным правом финальной триумвиратной ратификации (подписания) принятых законов." }
+            ]
+          },
+          {
+            number: 5,
+            title: "Статья 5. Состав Парламента и статус депутатов",
+            blocks: [
+              { text: "Членами Парламента являются депутаты, получившие мандат в установленном законом порядке." },
+              {
+                text: "По своей политической принадлежности депутатский корпус подразделяется на:",
+                list: [
+                  "Партийных депутатов, входящих в состав официально зарегистрированных парламентских партийных фракций (составляющих квалифицированное большинство Парламента);",
+                  "Независимых (внефракционных) депутатов, осуществляющих свои полномочия индивидуально вне партийных структур."
+                ]
+              },
+              { text: "Все депутаты обладают равным весом голоса при проведении процедур волеизъявления в чтениях, однако различаются по объёму субъектной законодательной правоспособности согласно Разделу IV настоящего Регламента." }
+            ]
+          },
+          {
+            number: 6,
+            title: "Статья 6. Партийные фракции и политическое устройство",
+            blocks: [
+              {
+                text: "Основу партийно-политической системы Парламента образуют две конституирующие парламентские партии:",
+                list: [
+                  "«Партия Национального Единства Мальдении» (ПНЕМ) - правящая политическая партия Республики Мальдения. В состав высшего руководства ПНЕМ входят Президент Республики Мальдения и Верховный Канцлер Республики Мальдения, при этом Верховный Канцлер по должности и статусу является Председателем «Партии Национального Единства Мальдении»;",
+                  "«Другая Мальдения» - системная парламентская политическая партия, Председателем которой по должности и статусу является Премьер-министр Республики Мальдения."
+                ]
+              },
+              { text: "Внутренняя дисциплина фракций, порядок выработки консолидированной партийной позиции и выдвижения партийных законопроектов регулируются уставами соответствующих партий в части, не противоречащей настоящему Регламенту." }
+            ]
+          }
+        ]
+      },
+      {
+        sectionId: 3,
+        roman: "РАЗДЕЛ III",
+        shortTitle: "Сессионный порядок",
+        title: "СЕССИОННЫЙ ПОРЯДОК, СОЗЫВ И РЕГЛАМЕНТ ЗАСЕДАНИЙ",
+        articles: [
+          {
+            number: 7,
+            title: "Статья 7. Созыв Парламента и учреждение очередных сессий",
+            blocks: [
+              { text: "Официальный созыв Парламента нового или действующего состава инициируется совместным распорядительным актом (декретом о созыве), подписанным не менее чем двумя Вышестоящими лицами из числа Президента, Верховного Канцлера и Премьер-министра." },
+              { text: "На первом учредительном пленарном заседании созыва Парламент путём протокольного постановления утверждает календарный график, периодичность и временные рамки проведения очередных пленарных сессий." },
+              { text: "Повестка дня очередного заседания формируется Секретариатом ЕГИКС на основании поступивших от уполномоченных субъектов законопроектов и оглашается председательствующим Вышестоящим лицом в момент открытия заседания." }
+            ]
+          },
+          {
+            number: 8,
+            title: "Статья 8. Порядок созыва чрезвычайных (экстренных) заседаний",
+            blocks: [
+              { text: "Для рассмотрения вопросов, требующих безотлагательного законодательного или государственно-политического вмешательства, созывается чрезвычайное (экстренное) пленарное заседание Парламента." },
+              {
+                text: "Правом императивного инициирования экстренного заседания обладают:",
+                list: [
+                  "Любое одно Вышестоящее лицо (Президент, Верховный Канцлер или Премьер-министр) единоличным распоряжением;",
+                  "Инициативная группа депутатов в составе не менее 4 (четырёх) человек путём подачи коллективного письменного требования, заверенного личными верификационными отметками в реестре извещений ЕГИКС Парламента."
+                ]
+              },
+              { text: "При поступлении надлежаще оформленного требования о созыве экстренного заседания оповещение направляется всем членам Парламента через официальный вестник оповещений с указанием точного времени открытия зала заседаний и исчерпывающего перечня вопросов чрезвычайной повестки." }
+            ]
+          },
+          {
+            number: 9,
+            title: "Статья 9. Принцип абсолютной внутрипарламентской открытости",
+            blocks: [
+              { text: "Все пленарные, очередные и чрезвычайные заседания Парламента Республики Мальдения являются строго открытыми для всех действующих членов Парламента." },
+              { text: "Учреждение закрытых, секретных, кулуарных или ограниченных по доступу заседаний, равно как и техническое или процедурное недопущение любого действующего депутата в зал пленарных заседаний (за исключением случаев исполнения вступившего в силу дисциплинарного взыскания в виде лишения мандата), категорически воспрещается и квалифицируется как узурпация парламентских полномочий." }
+            ]
+          },
+          {
+            number: 10,
+            title: "Статья 10. Временной регламент прений и выступлений",
+            blocks: [
+              { text: "Пленарное заседание проводится в официальном аудиовизуальном и протокольном зале ЕГИКС Парламента." },
+              { text: "Каждому докладчику, содокладчику или участнику парламентских прений предоставляется фиксированный временной лимит выступления продолжительностью не более 10 (десяти) минут на одно выступление по рассматриваемому вопросу повестки дня." },
+              { text: "Отсчёт времени начинается с момента предоставления слова ведущим заседание Вышестоящим лицом. В течение отведённых 10 минут никто из присутствующих (за исключением ведущего заседание в целях пресечения нарушения Статьи 18 настоящего Регламента) не вправе прерывать оратора." },
+              { text: "По истечении 10-минутного лимита право голоса автоматически прекращается и переходит к следующему записавшемуся участнику прений. Продление времени допускается исключительно для ответов докладчика на прямые вопросы депутатов с санкции ведущего заседание." }
+            ]
+          }
+        ]
+      },
+      {
+        sectionId: 4,
+        roman: "РАЗДЕЛ IV",
+        shortTitle: "Законодательный процесс",
+        title: "ЗАКОНОДАТЕЛЬНЫЙ ПРОЦЕСС И СТАДИИ РАССМОТРЕНИЯ ЗАКОНОПРОЕКТОВ",
+        articles: [
+          {
+            number: 11,
+            title: "Статья 11. Субъекты права законодательной инициативы",
+            blocks: [
+              {
+                text: "Исключительным правом официального внесения законопроектов в Парламент Республики Мальдения (правом законодательной инициативы) обладают:",
+                list: [
+                  "Парламентские политические партии («Партия Национального Единства Мальдении», партия «Другая Мальдения» и иные зарегистрированные фракции) в лице их партийного руководства или по решению фракции;",
+                  "Президент Республики Мальдения;",
+                  "Верховный Канцлер Республики Мальдения;",
+                  "Правительство Республики Мальдения (как коллегиальный орган исполнительной власти и в лице Премьер-министра), а также высшие государственные ведомства в пределах их компетенции."
+                ]
+              },
+              { text: "Индивидуальная депутатская законодательная инициатива запрещена. Отдельные депутаты (как состоящие во фракциях, так и независимые) не вправе единолично вносить законопроекты в реестр Парламента." },
+              { text: "Депутат, разработавший проект нормативно-правового акта в порядке личной правотворческой работы, обязан направить его в виде предзаконопроектного ходатайства в адрес руководства политической партии, Правительства, Президента или Верховного Канцлера. Законопроект приобретает официальный процессуальный статус только после его формального внесения одним из субъектов, указанных в пункте 1 настоящей Статьи." }
+            ]
+          },
+          {
+            number: 12,
+            title: "Статья 12. Регистрация и требования к оформлению законопроекта",
+            blocks: [
+              {
+                text: "Вносимый законопроект подлежит публикации в Палате законодательных инициатив ЕГИКС и должен содержать:",
+                list: [
+                  "Официальное наименование акта и указание субъекта законодательной инициативы;",
+                  "Преамбулу (пояснительную записку с обоснованием государственно-правовой целесообразности);",
+                  "Структурированный постатейный текст с нумерацией глав, статей и пунктов;",
+                  "Перечень ранее принятых актов, подлежащих отмене или изменению в связи с принятием данного закона."
+                ]
+              }
+            ]
+          },
+          {
+            number: 13,
+            title: "Статья 13. Процедура трёх чтений",
+            blocks: [
+              { text: "Рассмотрение каждого законопроекта в Парламенте осуществляется строго последовательно в трёх обязательных чтениях:" },
+              {
+                text: "Первое чтение (концептуальное):",
+                list: [
+                  "Представитель субъекта законодательной инициативы выступает с основным докладом (до 10 минут), излагая концепцию, цели и структуру законопроекта.",
+                  "Проводятся общие прения по вопросу необходимости принятия акта без детального редактирования отдельных формулировок.",
+                  "По завершении прений законопроект выносится на голосование в первом чтении («О принятии концепции законопроекта за основу»). В случае отклонения в первом чтении законопроект снимается с дальнейшего рассмотрения и направляется в архив отклонённых инициатив."
+                ]
+              },
+              {
+                text: "Второе чтение (редакционно-поправочное):",
+                list: [
+                  "Законопроект, одобренный в первом чтении, переходит в стадию постатейного разбирательства и внесения поправок.",
+                  "На стадии второго чтения правом выдвижения текстовых поправок (на изменение формулировок, дополнение новыми статьями или исключение отдельных норм) обладают как субъекты законодательной инициативы, так и отдельные депутаты Парламента.",
+                  "Каждая предложенная поправка оглашается на заседании, кратко обосновывается автором и ставится на отдельное голосование в Специальном реестре волеизъявления. Поправки, получившие одобрение, инкорпорируются в основной текст законопроекта; отклонённые поправки аннулируются."
+                ]
+              },
+              {
+                text: "Третье чтение (финальное текстуальное закрепление):",
+                list: [
+                  "Сводный текст законопроекта со всеми включёнными во втором чтении поправками зачитывается или публикуется в окончательной редакции.",
+                  "В третьем чтении внесение новых сущностных поправок и возврат к дискуссии по содержанию статей не допускаются (разрешается лишь устранение технических опечаток и внутренних нумерационных противоречий).",
+                  "Проводится итоговое голосование за принятие закона в целом."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        sectionId: 5,
+        roman: "РАЗДЕЛ V",
+        shortTitle: "Голосование и Ратификация",
+        title: "ПРОЦЕДУРА ВОЛЕИЗЪЯВЛЕНИЯ, ВЕРИФИКАЦИЯ И ТРИУМВИРАТНАЯ РАТИФИКАЦИЯ",
+        articles: [
+          {
+            number: 14,
+            title: "Статья 14. Специальный реестр волеизъявления (Палата голосований)",
+            blocks: [
+              { text: "Все процедуры голосования по первому, второму и третьему чтениям, а также по процедурным и регламентным вопросам осуществляются исключительно в выделенном защищённом разделе ЕГИКС Парламента - Специальном реестре волеизъявления (Палате голосований)." },
+              { text: "В Палате голосований запрещается ведение любых прений, публикация комментариев, реплик и сторонних материалов; раздел предназначен строго для публикации формулы голосования и фиксации голосов членов Парламента." },
+              { text: "Голосование является открытым и поимённым. Каждый депутат выражает свою волю лично по одной из трёх позиций: «За», «Против» или «Воздержался». Закон или поправка считаются прошедшими чтение, если за них подано простое большинство голосов от числа принявших участие в голосовании депутатов (при наличии кворума не менее половины списочного состава Парламента), если иное не установлено Конституцией." }
+            ]
+          },
+          {
+            number: 15,
+            title: "Статья 15. Финальное закрепление и поимённый лист подтверждения депутатов",
+            blocks: [
+              { text: "Немедленно после успешного завершения голосования в третьем чтении запускается обязательная процедура финального закрепления текста закона." },
+              { text: "Окончательный свод закона формируется в виде единого государственного акта, к которому прилагается Лист депутатской верификации." },
+              { text: "Каждый член Парламента, присутствовавший на заседании и поддержавший принятие акта (либо удостоверяющий легитимность проведённой процедуры), обязан поставить под итоговым документом своё персональное подтверждение - личную верификационную подпись депутата в установленном формате реестра." }
+            ]
+          },
+          {
+            number: 16,
+            title: "Статья 16. Правило Трёх Главных Подписей (Триумвиратная ратификация)",
+            blocks: [
+              { text: "Принятый Парламентом в трёх чтениях и подтверждённый подписями депутатов законопроект направляется на высшую государственную ратификацию (промульгацию)." },
+              {
+                text: "Исключительным и непреложным условием действительности любого закона Республики Мальдения является наличие под его окончательным текстом трёх обязательных главных подписей Вышестоящих лиц:",
+                list: [
+                  "Первая главная подпись: Президент Республики Мальдения;",
+                  "Вторая главная подпись: Верховный Канцлер Республики Мальдения;",
+                  "Третья главная подпись: Премьер-министр Республики Мальдения."
+                ]
+              },
+              { text: "Условие абсолютной ничтожности: Законодательный акт, под которым отсутствует хотя бы одна из трёх указанных главных подписей (Президента, Верховного Канцлера или Премьер-министра), не имеет юридической силы, считается недействительным (ничтожным), не подлежит включению в Свод законов Республики Мальдения и не порождает никаких прав или обязанностей для граждан и государственных органов." },
+              { text: "Отказ любого из трёх Вышестоящих лиц от постановки главной подписи означает наложение абсолютного суверенного вето на данный законопроект, после чего документ либо возвращается в Парламент на стадию второго чтения для выработки компромиссной редакции, либо окончательно отклоняется." },
+              { text: "Закон вступает в законную силу в момент постановки третьей (завершающей) главной подписи Вышестоящего лица и его официального обнародования в Государственном вестнике нормативных актов." }
+            ]
+          }
+        ]
+      },
+      {
+        sectionId: 6,
+        roman: "РАЗДЕЛ VI",
+        shortTitle: "Этика и дисциплина",
+        title: "ПАРЛАМЕНТСКАЯ ЭТИКА, ДИСЦИПЛИНА И ОТВЕТСТВЕННОСТЬ",
+        articles: [
+          {
+            number: 17,
+            title: "Статья 17. Нормы парламентской этики и процессуального порядка",
+            blocks: [
+              { text: "Депутаты Парламента обязаны соблюдать высокую культуру государственной речи, уважать достоинство Вышестоящих лиц и коллег по депутатскому корпусу, а также беспрекословно подчиняться процессуальным распоряжениям лица, ведущего заседание." },
+              {
+                text: "На пленарных заседаниях и в официальных реестрах ЕГИКС Парламента строго запрещаются:",
+                list: [
+                  "Перебивание выступающего докладчика (в том числе путём создания звуковых помех, несанкционированного включения микрофона или массовой отправки текстовых сообщений во время 10-минутного выступления);",
+                  "Употребление ненормативной лексики, личных оскорблений, клеветнических выпадов и призывов к антиконституционным действиям;",
+                  "Саботаж процедуры голосования, фальсификация подписей или засорение Специального реестра волеизъявления (Палаты голосований) посторонними записями."
+                ]
+              }
+            ]
+          },
+          {
+            number: 18,
+            title: "Статья 18. Градация мер дисциплинарного воздействия",
+            blocks: [
+              { text: "За нарушение норм парламентской этики и положений настоящего Регламента к депутату-нарушителю решением ведущего заседание Вышестоящего лица применяются следующие меры государственно-дисциплинарного принуждения:" },
+              {
+                text: "Первая ступень - Официальное протокольное предупреждение (порицание):",
+                list: [
+                  "Выносится при первичном нарушении порядка выступлений, превышении временного лимита или некорректном поведении в зале заседаний и заносится в протокол сессии."
+                ]
+              },
+              {
+                text: "Вторая ступень - Лишение слова и процессуального права голоса на заседании:",
+                list: [
+                  "Применяется при повторном нарушении после вынесенного предупреждения либо при грубом вмешательстве в ход доклада.",
+                  "Нарушителю принудительно блокируется техническая возможность аудиовизуального выступления и аннулируется право участия в текущем голосовании в Палате голосований до момента официального закрытия данной сессии."
+                ]
+              },
+              {
+                text: "Третья ступень (высшая мера) - Лишение депутатского мандата (императивное исключение):",
+                list: [
+                  "Применяется за систематическое нарушение Регламента (получение трёх и более протокольных предупреждений в течение созыва), злостный саботаж работы Парламента, грубое оскорбление Вышестоящих лиц или попытку подрыва конституционного строя.",
+                  "Депутат немедленно лишается статуса члена Парламента, его полномочия досрочно прекращаются, а верификационные доступы к залам заседаний и Палате голосований ЕГИКС аннулируются. Освободившийся партийный мандат передаётся соответствующей политической партии («Партии Национального Единства Мальдении» или «Другой Мальдении») для замещения новым кандидатом."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        sectionId: 7,
+        roman: "РАЗДЕЛ VII",
+        shortTitle: "Заключительные положения",
+        title: "ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ И ПОРЯДОК ПЕРЕСМОТРА РЕГЛАМЕНТА",
+        articles: [
+          {
+            number: 19,
+            title: "Статья 19. Исключительный порядок внесения поправок в Регламент",
+            blocks: [
+              {
+                text: "Правом официального внесения проектов поправок, дополнений или новой редакции настоящего Регламента на рассмотрение Парламента обладают исключительно два высших должностных лица:",
+                list: [
+                  "Президент Республики Мальдения;",
+                  "Верховный Канцлер Республики Мальдения."
+                ]
+              },
+              {
+                text: "Президент или Верховный Канцлер инициируют процедуру изменения Регламента по одному из двух оснований:",
+                list: [
+                  "В порядке личной суверенной инициативы Президента или Верховного Канцлера;",
+                  "На основании коллективного депутатского ходатайства (инициативы депутатов), направленного в адрес Президента или Верховного Канцлера и принятого ими к производству."
+                ]
+              },
+              { text: "Проект поправок в Регламент, внесённый Президентом или Верховным Канцлером, выносится на пленарное заседание Парламента, проходит процедуру обсуждения и утверждается голосованием в Специальном реестре волеизъявления с последующим обязательным заверением." }
+            ]
+          },
+          {
+            number: 20,
+            title: "Статья 20. Вступление Регламента в силу",
+            blocks: [
+              { text: "Настоящий Регламент вступает в силу с момента его официального утверждения и подписания Вышестоящими лицами Республики Мальдения и действует бессрочно на все последующие созывы Парламента вплоть до его официального изменения в порядке, предусмотренном Статьёй 19." }
+            ]
+          }
+        ]
+      }
+    ];
+
+    // Safe LocalStorage Helper
+    function safeGetStorage(key, fallback) {
+      try {
+        const val = localStorage.getItem(key);
+        return val !== null ? val : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    }
+    function safeSetStorage(key, val) {
+      try {
+        localStorage.setItem(key, val);
+      } catch (e) {}
+    }
+
+    // Application State
+    const appState = {
+      theme: safeGetStorage('maldenia_theme', 'dark'),
+      palette: safeGetStorage('maldenia_palette', 'indigo'),
+      fontSize: safeGetStorage('maldenia_font_scale', '100'),
+      sidebarCollapsed: safeGetStorage('maldenia_rail', 'false') === 'true',
+      bookmarks: (function() {
+        try {
+          return JSON.parse(safeGetStorage('maldenia_bookmarks', '[]')) || [];
+        } catch (e) { return []; }
+      })(),
+      sectionFilter: 'all', // 'all' | 'bookmarks' | 1..7
+      searchQuery: '',
+      collapsedSections: {},
+      collapsedArticles: {},
+      splashTimers: []
+    };
+
+    // ==========================================================================
+    // 1. SYMMETRICAL SCALLOP PATH (CENTERED AT 100,100) & ~2.3s TEXT-FREE SPLASH
+    // ==========================================================================
+    function buildSymmetricalScallopPath() {
+      const pathEl = document.getElementById('splash-scallop-path');
+      if (!pathEl) return;
+      const cx = 100, cy = 100, baseR = 76, amp = 9, lobes = 12, steps = 240;
+      let d = '';
+      for (let i = 0; i <= steps; i++) {
+        const angle = (i / steps) * Math.PI * 2;
+        const r = baseR + amp * Math.cos(lobes * angle);
+        const x = (cx + r * Math.cos(angle)).toFixed(2);
+        const y = (cy + r * Math.sin(angle)).toFixed(2);
+        d += (i === 0 ? 'M ' + x + ' ' + y : ' L ' + x + ' ' + y);
+      }
+      d += ' Z';
+      pathEl.setAttribute('d', d);
+    }
+
+    function startSplashScreen() {
+      const splash = document.getElementById('splash-screen');
+      const bar = document.getElementById('splash-progress-bar');
+
+      appState.splashTimers.forEach(t => clearTimeout(t));
+      appState.splashTimers = [];
+
+      if (splash) splash.classList.remove('splash-hidden');
+      if (bar) bar.style.width = '10%';
+
+      const stages = [
+        { p: 38, t: 350 },
+        { p: 74, t: 950 },
+        { p: 96, t: 1650 },
+        { p: 100, t: 2050 }
+      ];
+
+      stages.forEach(st => {
+        appState.splashTimers.push(setTimeout(() => {
+          if (bar) bar.style.width = st.p + '%';
+        }, st.t));
+      });
+
+      appState.splashTimers.push(setTimeout(() => {
+        hideSplashScreen();
+      }, 2300));
+    }
+
+    function hideSplashScreen() {
+      appState.splashTimers.forEach(t => clearTimeout(t));
+      const splash = document.getElementById('splash-screen');
+      if (splash) splash.classList.add('splash-hidden');
+    }
+    window.hideSplashScreen = hideSplashScreen;
+
+    function replaySplashScreen() {
+      startSplashScreen();
+    }
+
+    // ==========================================================================
+    // 2. THEME & PALETTE CONTROLLER (#paletteModal)
+    // ==========================================================================
+    function applyThemeAndPalette() {
+      document.documentElement.setAttribute('data-theme', appState.theme);
+      document.documentElement.setAttribute('data-palette', appState.palette);
+      safeSetStorage('maldenia_theme', appState.theme);
+      safeSetStorage('maldenia_palette', appState.palette);
+
+      ['light', 'dark', 'oled'].forEach(m => {
+        const sBtn = document.getElementById('side-theme-' + m);
+        const mBtn = document.getElementById('mod-theme-' + m);
+        if (sBtn) sBtn.classList.toggle('active', appState.theme === m);
+        if (mBtn) mBtn.classList.toggle('active', appState.theme === m);
+      });
+
+      document.querySelectorAll('.palette-dot').forEach(dot => {
+        const isCurrent = dot.getAttribute('data-pal') === appState.palette;
+        dot.classList.toggle('active', isCurrent);
+        dot.textContent = isCurrent ? '✓' : '';
+      });
+
+      ['indigo', 'emerald', 'crimson', 'amber', 'cyan'].forEach(p => {
+        const isCurrent = appState.palette === p;
+        const card = document.getElementById('pal-card-' + p);
+        const check = document.getElementById('pal-check-' + p);
+        if (card) card.classList.toggle('active', isCurrent);
+        if (check) check.textContent = isCurrent ? '✓' : '';
+      });
+    }
+
+    function setTheme(mode) {
+      appState.theme = mode;
+      applyThemeAndPalette();
+      const labels = {
+        light: 'Светлая тема активирована',
+        dark: 'Тёмная тема активирована',
+        oled: 'Тема OLED активирована'
+      };
+      showToast(labels[mode] || 'Тема изменена');
+    }
+
+    function cycleTheme() {
+      const order = ['light', 'dark', 'oled'];
+      const next = order[(order.indexOf(appState.theme) + 1) % order.length];
+      setTheme(next);
+    }
+
+    function setPalette(pal) {
+      appState.palette = pal;
+      applyThemeAndPalette();
+      const names = {
+        indigo: 'Палитра: Государственный Индиго',
+        emerald: 'Палитра: Изумрудный Суверенитет',
+        crimson: 'Палитра: Имперский Пурпур',
+        amber: 'Палитра: Золотой Триумвират',
+        cyan: 'Палитра: Океанический Циан'
+      };
+      showToast(names[pal] || 'Палитра обновлена');
+    }
+
+    function openPaletteModal() {
+      const m = document.getElementById('paletteModal');
+      if (m) m.classList.add('open');
+    }
+    function closePaletteModal() {
+      const m = document.getElementById('paletteModal');
+      if (m) m.classList.remove('open');
+    }
+    window.openPaletteModal = openPaletteModal;
+    window.closePaletteModal = closePaletteModal;
+
+    // ==========================================================================
+    // 3. LEFT SIDEBAR DRAWER & RAIL NAVIGATION
+    // ==========================================================================
+    function toggleSidebarCollapse() {
+      appState.sidebarCollapsed = !appState.sidebarCollapsed;
+      safeSetStorage('maldenia_rail', String(appState.sidebarCollapsed));
+      const sb = document.getElementById('app-sidebar');
+      if (sb) sb.classList.toggle('collapsed', appState.sidebarCollapsed);
+    }
+
+    function openMobileSidebar() {
+      const sb = document.getElementById('app-sidebar');
+      const bd = document.getElementById('mobile-drawer-backdrop');
+      if (sb) sb.classList.add('mobile-open');
+      if (bd) bd.classList.add('open');
+    }
+
+    function closeMobileSidebar() {
+      const sb = document.getElementById('app-sidebar');
+      const bd = document.getElementById('mobile-drawer-backdrop');
+      if (sb) sb.classList.remove('mobile-open');
+      if (bd) bd.classList.remove('open');
+    }
+
+    function renderSidebarSections() {
+      const list = document.getElementById('sidebar-sections-list');
+      if (!list) return;
+      const romans = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII' };
+
+      list.innerHTML = REGULATION_DATA.map(sec => {
+        const first = sec.articles[0].number;
+        const last = sec.articles[sec.articles.length - 1].number;
+        const isActive = Number(appState.sectionFilter) === sec.sectionId;
+        return `
+          <button
+            type="button"
+            class="nav-pill ${isActive ? 'active' : ''}"
+            onclick="selectSectionFromNav(${sec.sectionId}); closeMobileSidebar();"
+            title="${sec.roman}. ${sec.title} (Ст. ${first}-${last})"
+          >
+            <div class="nav-pill-left">
+              <span class="roman-box mono">${romans[sec.sectionId]}</span>
+              <span class="nav-label">${sec.shortTitle}</span>
+            </div>
+            <span class="nav-badge mono">${first}-${last}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectSectionFromNav(secId) {
+      appState.sectionFilter = 'all';
+      appState.collapsedSections[secId] = false;
+      const secObj = REGULATION_DATA.find(s => s.sectionId === secId);
+      if (secObj) {
+        secObj.articles.forEach(a => { appState.collapsedArticles[a.number] = false; });
+      }
+      renderArticlesStream();
+      updateNavigationHighlights();
+
+      setTimeout(() => {
+        const secEl = document.getElementById('section-' + secId);
+        if (secEl) {
+          secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 40);
+    }
+
+    function updateNavigationHighlights() {
+      const isBookmarks = appState.sectionFilter === 'bookmarks';
+      const isAll = appState.sectionFilter === 'all';
+
+      const navAll = document.getElementById('nav-mode-all');
+      const navBmk = document.getElementById('nav-mode-bookmarks');
+
+      if (navAll) navAll.classList.toggle('active', isAll);
+      if (navBmk) navBmk.classList.toggle('active', isBookmarks);
+
+      const mobArt = document.getElementById('mob-tab-articles');
+      const mobBmk = document.getElementById('mob-tab-bookmarks');
+      if (mobArt) mobArt.classList.toggle('active', isAll || typeof appState.sectionFilter === 'number');
+      if (mobBmk) mobBmk.classList.toggle('active', isBookmarks);
+
+      const topBadge = document.getElementById('top-filter-badge');
+      if (topBadge) {
+        if (isBookmarks) topBadge.textContent = 'Закладки (' + appState.bookmarks.length + ')';
+        else if (typeof appState.sectionFilter === 'number') {
+          const sec = REGULATION_DATA.find(s => s.sectionId === appState.sectionFilter);
+          topBadge.textContent = sec ? sec.roman : 'Раздел';
+        } else {
+          topBadge.textContent = 'Все разделы (20)';
+        }
+      }
+
+      renderSidebarSections();
+    }
+
+    // ==========================================================================
+    // 4. RENDERING ARTICLES STREAM (NO HASHTAGS, NO HORIZONTAL SECTION CHIPS)
+    // ==========================================================================
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlightText(text, query) {
+      if (!query || !query.trim()) return text;
+      const rx = new RegExp('(' + escapeRegExp(query.trim()) + ')', 'gi');
+      return text.replace(rx, '<mark class="hl">$1</mark>');
+    }
+
+    function articleMatchesSearch(art, sec, q) {
+      if (!q) return true;
+      const lq = q.toLowerCase();
+      if (('статья ' + art.number).includes(lq) || String(art.number) === lq) return true;
+      if (art.title.toLowerCase().includes(lq)) return true;
+      if (sec.title.toLowerCase().includes(lq) || sec.roman.toLowerCase().includes(lq)) return true;
+      for (const b of art.blocks) {
+        if (b.text.toLowerCase().includes(lq)) return true;
+        if (b.list && b.list.some(item => item.toLowerCase().includes(lq))) return true;
+      }
+      return false;
+    }
+
+    function renderArticlesStream() {
+      const container = document.getElementById('articles-stream');
+      if (!container) return;
+
+      const q = appState.searchQuery.trim();
+      const clearBtn = document.getElementById('search-clear-btn');
+      const countBadge = document.getElementById('search-count-badge');
+
+      if (clearBtn) clearBtn.classList.toggle('hidden', q.length === 0);
+
+      let totalMatches = 0;
+      let html = '';
+
+      REGULATION_DATA.forEach(sec => {
+        if (typeof appState.sectionFilter === 'number' && appState.sectionFilter !== sec.sectionId) {
+          return;
+        }
+
+        const filteredArticles = sec.articles.filter(art => {
+          if (appState.sectionFilter === 'bookmarks' && !appState.bookmarks.includes(art.number)) {
+            return false;
+          }
+          return articleMatchesSearch(art, sec, q);
+        });
+
+        if (filteredArticles.length === 0) return;
+        totalMatches += filteredArticles.length;
+
+        const isSectionCollapsed = Boolean(appState.collapsedSections[sec.sectionId]) && q.length === 0;
+
+        html += `
+          <section id="section-${sec.sectionId}" class="section-block">
+            <button
+              type="button"
+              class="section-header-bar"
+              onclick="toggleSection(${sec.sectionId})"
+              aria-expanded="${!isSectionCollapsed}"
+            >
+              <div class="section-header-left">
+                <span class="section-roman-pill mono">${sec.roman}</span>
+                <div>
+                  <div class="section-title-text">${highlightText(sec.title, q)}</div>
+                  <div style="font-size:11.5px;color:var(--md-on-surface-variant)">
+                    Статей в разделе: ${filteredArticles.length}
+                  </div>
+                </div>
+              </div>
+              <span class="section-chevron-badge mono">
+                <span>${isSectionCollapsed ? 'Развернуть' : 'Свернуть'}</span>
+                <span>${isSectionCollapsed ? '▼' : '▲'}</span>
+              </span>
+            </button>
+
+            <div class="articles-list ${isSectionCollapsed ? 'hidden' : ''}">
+              ${filteredArticles.map(art => renderArticleCard(art, sec, q)).join('')}
+            </div>
+          </section>
+        `;
+      });
+
+      if (countBadge) {
+        if (q.length > 0) {
+          countBadge.textContent = 'Найдено: ' + totalMatches;
+          countBadge.classList.remove('hidden');
+        } else {
+          countBadge.classList.add('hidden');
+        }
+      }
+
+      if (totalMatches === 0) {
+        html = `
+          <div class="hero-card" style="text-align:center;padding:48px 20px">
+            <div style="font-size:36px;margin-bottom:10px">⌕</div>
+            <h3 style="font-size:18px;font-weight:800;margin-bottom:6px">Статьи не найдены</h3>
+            <p style="font-size:13px;color:var(--md-on-surface-variant);margin-bottom:18px">
+              По текущему поисковому запросу или фильтру закладок совпадений не обнаружено.
+            </p>
+            <button type="button" class="pill-btn pill-btn-primary" onclick="resetAllFilters()">
+              Показать все 20 статей Регламента
+            </button>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function renderArticleCard(art, sec, q) {
+      const isBookmarked = appState.bookmarks.includes(art.number);
+      const isArticleCollapsed = Boolean(appState.collapsedArticles[art.number]) && q.length === 0;
+
+      const clausesHtml = art.blocks.map((b, i) => {
+        const subList = (b.list && b.list.length)
+          ? `<ul class="clause-sublist">
+              ${b.list.map(item => `
+                <li>
+                  <span class="clause-bullet"></span>
+                  <span>${highlightText(item, q)}</span>
+                </li>
+              `).join('')}
+             </ul>`
+          : '';
+
+        return `
+          <div class="clause-box">
+            <div class="clause-row">
+              <span class="clause-index mono">${i + 1}</span>
+              <div class="clause-text">${highlightText(b.text, q)}</div>
+            </div>
+            ${subList}
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <article id="article-${art.number}" class="article-card ${isArticleCollapsed ? 'article-collapsed' : ''}">
+          <div class="article-top">
+            <div class="article-badges">
+              <span class="art-num-badge mono">СТАТЬЯ ${art.number}</span>
+              <span class="art-sec-label">${sec.roman} • ${sec.shortTitle}</span>
+            </div>
+
+            <div class="article-actions">
+              <button
+                type="button"
+                class="art-action-btn ${isBookmarked ? 'bookmarked' : ''}"
+                onclick="toggleBookmark(${art.number})"
+                title="${isBookmarked ? 'Убрать из закладок' : 'Сохранить статью в закладки'}"
+              >★</button>
+              <button
+                type="button"
+                class="art-action-btn"
+                onclick="copyArticle(${art.number})"
+                title="Скопировать официальную цитату статьи"
+              >⧉</button>
+              <button
+                type="button"
+                class="art-action-btn"
+                onclick="openFocusModal(${art.number})"
+                title="Открыть статью в отдельном окне для чтения"
+              >⛶</button>
+              <button
+                type="button"
+                class="art-action-btn"
+                onclick="toggleArticleCollapse(${art.number})"
+                title="${isArticleCollapsed ? 'Развернуть текст статьи' : 'Свернуть текст статьи'}"
+              >${isArticleCollapsed ? '▼' : '▲'}</button>
+            </div>
+          </div>
+
+          <h3 class="article-title" onclick="toggleArticleCollapse(${art.number})">
+            ${highlightText(art.title, q)}
+          </h3>
+
+          <div class="article-clauses ${isArticleCollapsed ? 'hidden' : ''}">
+            ${clausesHtml}
+          </div>
+
+          <div class="article-footer ${isArticleCollapsed ? 'hidden' : ''}">
+            <span>${sec.roman} • Регламент Парламента Республики Мальдения</span>
+            <div style="display:flex;gap:8px">
+              <button type="button" class="art-footer-btn" onclick="toggleArticleCollapse(${art.number})">Свернуть статью ▲</button>
+              <button type="button" class="art-footer-btn" onclick="openFocusModal(${art.number})">Режим чтения ⛶</button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    // ==========================================================================
+    // 5. SECTION & ARTICLE COLLAPSE/EXPAND, SEARCH, BOOKMARKS & FOCUS
+    // ==========================================================================
+    function filterBySection(filterId) {
+      if (filterId === 'all' || filterId === 'bookmarks') {
+        appState.sectionFilter = filterId;
+        if (filterId === 'all') {
+          REGULATION_DATA.forEach(s => { appState.collapsedSections[s.sectionId] = false; });
+        }
+      } else {
+        const secNum = Number(filterId);
+        appState.sectionFilter = secNum;
+        appState.collapsedSections[secNum] = false;
+        const secObj = REGULATION_DATA.find(s => s.sectionId === secNum);
+        if (secObj) {
+          secObj.articles.forEach(a => { appState.collapsedArticles[a.number] = false; });
+        }
+      }
+      renderArticlesStream();
+      updateNavigationHighlights();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function jumpToArticle(artNum) {
+      appState.sectionFilter = 'all';
+      const found = findArticle(artNum);
+      if (found) {
+        appState.collapsedSections[found.sec.sectionId] = false;
+        appState.collapsedArticles[artNum] = false;
+      }
+      renderArticlesStream();
+      updateNavigationHighlights();
+
+      setTimeout(() => {
+        const el = document.getElementById('article-' + artNum);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('highlight-pulse');
+          setTimeout(() => el.classList.remove('highlight-pulse'), 1800);
+        }
+      }, 60);
+    }
+
+    function onSearchInput(val) {
+      appState.searchQuery = val;
+      renderArticlesStream();
+    }
+
+    function clearSearchInput() {
+      const inp = document.getElementById('search-input');
+      if (inp) inp.value = '';
+      appState.searchQuery = '';
+      renderArticlesStream();
+    }
+
+    function resetAllFilters() {
+      appState.sectionFilter = 'all';
+      REGULATION_DATA.forEach(s => { appState.collapsedSections[s.sectionId] = false; });
+      clearSearchInput();
+      renderArticlesStream();
+      updateNavigationHighlights();
+    }
+
+    function toggleSection(secId) {
+      const current = Boolean(appState.collapsedSections[secId]);
+      appState.collapsedSections[secId] = !current;
+      renderArticlesStream();
+    }
+
+    function toggleArticleCollapse(artNum) {
+      const current = Boolean(appState.collapsedArticles[artNum]);
+      appState.collapsedArticles[artNum] = !current;
+      renderArticlesStream();
+    }
+
+    function collapseAllSections() {
+      clearSearchInput();
+      REGULATION_DATA.forEach(s => {
+        appState.collapsedSections[s.sectionId] = true;
+      });
+      renderArticlesStream();
+      showToast('Все разделы свёрнуты');
+    }
+
+    function expandAllSections() {
+      REGULATION_DATA.forEach(s => {
+        appState.collapsedSections[s.sectionId] = false;
+        s.articles.forEach(a => {
+          appState.collapsedArticles[a.number] = false;
+        });
+      });
+      renderArticlesStream();
+      showToast('Все разделы и статьи развёрнуты');
+    }
+
+    function setDocFontSize(scale) {
+      const normalized = ['90', '100', '115', '130'].includes(String(scale)) ? String(scale) : '100';
+      appState.fontSize = normalized;
+      safeSetStorage('maldenia_font_scale', normalized);
+      const map = { '90': '14.5px', '100': '16px', '115': '18.5px', '130': '20.5px' };
+      document.documentElement.style.setProperty('--doc-font-size', map[normalized]);
+
+      ['90', '100', '115', '130'].forEach(k => {
+        const b1 = document.getElementById('font-' + k);
+        const b2 = document.getElementById('mod-font-' + k);
+        if (b1) b1.classList.toggle('active', k === normalized);
+        if (b2) b2.classList.toggle('active', k === normalized);
+      });
+    }
+
+    function toggleBookmark(artNum) {
+      const idx = appState.bookmarks.indexOf(artNum);
+      if (idx === -1) {
+        appState.bookmarks.push(artNum);
+        showToast('Статья ' + artNum + ' добавлена в закладки ★');
+      } else {
+        appState.bookmarks.splice(idx, 1);
+        showToast('Статья ' + artNum + ' удалена из закладок');
+      }
+      safeSetStorage('maldenia_bookmarks', JSON.stringify(appState.bookmarks));
+      const badge = document.getElementById('sidebar-bookmark-badge');
+      if (badge) badge.textContent = String(appState.bookmarks.length);
+      renderArticlesStream();
+      updateNavigationHighlights();
+    }
+
+    function findArticle(artNum) {
+      for (const sec of REGULATION_DATA) {
+        for (const art of sec.articles) {
+          if (art.number === artNum) return { art, sec };
+        }
+      }
+      return null;
+    }
+
+    function copyArticle(artNum) {
+      const found = findArticle(artNum);
+      if (!found) return;
+      const { art, sec } = found;
+      let txt = sec.roman + '. ' + sec.title + '\n' + art.title + '\n\n';
+      art.blocks.forEach((b, i) => {
+        txt += (i + 1) + '. ' + b.text + '\n';
+        if (b.list) {
+          b.list.forEach(li => { txt += '   • ' + li + '\n'; });
+        }
+      });
+      txt += '\n- Регламент Парламента Республики Мальдения';
+
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = txt;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (e) {}
+      showToast('Статья ' + artNum + ' скопирована в буфер обмена');
+    }
+
+    function openFocusModal(artNum) {
+      const found = findArticle(artNum);
+      if (!found) return;
+      const { art, sec } = found;
+
+      document.getElementById('focus-sec-badge').textContent = sec.roman + ' • ' + sec.shortTitle;
+      document.getElementById('focus-title').textContent = art.title;
+      document.getElementById('focus-counter').textContent = 'Статья ' + art.number + ' / 20';
+
+      const body = document.getElementById('focus-body');
+      body.innerHTML = art.blocks.map((b, i) => `
+        <div class="clause-box">
+          <div class="clause-row">
+            <span class="clause-index mono">${i + 1}</span>
+            <div class="clause-text">${b.text}</div>
+          </div>
+          ${b.list ? `<ul class="clause-sublist">${b.list.map(li => `<li><span class="clause-bullet"></span><span>${li}</span></li>`).join('')}</ul>` : ''}
+        </div>
+      `).join('');
+
+      document.getElementById('focus-copy-btn').onclick = () => copyArticle(art.number);
+      const prev = document.getElementById('focus-prev-btn');
+      const next = document.getElementById('focus-next-btn');
+      prev.disabled = art.number <= 1;
+      next.disabled = art.number >= 20;
+      prev.onclick = () => { if (art.number > 1) openFocusModal(art.number - 1); };
+      next.onclick = () => { if (art.number < 20) openFocusModal(art.number + 1); };
+
+      document.getElementById('focus-modal').classList.add('open');
+    }
+
+    function closeFocusModal() {
+      const m = document.getElementById('focus-modal');
+      if (m) m.classList.remove('open');
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const sb = document.getElementById('snackbar');
+      if (!sb) return;
+      sb.textContent = msg;
+      sb.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => sb.classList.remove('show'), 2600);
+    }
+
+    // ==========================================================================
+    // 6. SAFE INITIALIZATION ON DOMCONTENTLOADED
+    // ==========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        buildSymmetricalScallopPath();
+        applyThemeAndPalette();
+        setDocFontSize(appState.fontSize);
+
+        const sb = document.getElementById('app-sidebar');
+        if (sb) sb.classList.toggle('collapsed', appState.sidebarCollapsed);
+
+        const bmkBadge = document.getElementById('sidebar-bookmark-badge');
+        if (bmkBadge) bmkBadge.textContent = String(appState.bookmarks.length);
+
+        renderSidebarSections();
+        renderArticlesStream();
+        updateNavigationHighlights();
+        startSplashScreen();
+      } catch (err) {
+        console.error('Init error:', err);
+        hideSplashScreen();
+      }
+    });
+  </script>
+</body>
+</html>
